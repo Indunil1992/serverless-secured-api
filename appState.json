@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "3819771b-d1c1-49be-99d7-95692d8dcbb8": {
-        "id": "3819771b-d1c1-49be-99d7-95692d8dcbb8",
+      "7522bd88-760e-4268-a9c6-004316b1043b": {
+        "id": "7522bd88-760e-4268-a9c6-004316b1043b",
         "parent": null,
         "name": "serverless-secured-api",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "edb5c13e-380a-43e6-9f7a-270357905fbb"
+          "013c2eab-2ac6-4f68-be34-1d3832e2f63b"
         ],
         "isRemovable": false,
         "filePath": "serverless-secured-api"
       },
-      "edb5c13e-380a-43e6-9f7a-270357905fbb": {
-        "id": "edb5c13e-380a-43e6-9f7a-270357905fbb",
-        "parent": "3819771b-d1c1-49be-99d7-95692d8dcbb8",
+      "013c2eab-2ac6-4f68-be34-1d3832e2f63b": {
+        "id": "013c2eab-2ac6-4f68-be34-1d3832e2f63b",
+        "parent": "7522bd88-760e-4268-a9c6-004316b1043b",
         "name": "handler.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -37,8 +37,8 @@
           }
         ]
       },
-      "bd5fb240-2dd8-4793-8a69-6613a0234341": {
-        "id": "bd5fb240-2dd8-4793-8a69-6613a0234341",
+      "609699f4-2c14-4da6-9cfb-bdc7da275cba": {
+        "id": "609699f4-2c14-4da6-9cfb-bdc7da275cba",
         "parent": null,
         "name": "serverless.yml",
         "type": "YAML_FILE",
@@ -48,8 +48,8 @@
         "filePath": "serverless.yml",
         "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
       },
-      "aad3eec8-b90c-40c6-874e-7800df76184a": {
-        "id": "aad3eec8-b90c-40c6-874e-7800df76184a",
+      "8fb74d1b-847c-44f6-a423-9b0cb07fb42a": {
+        "id": "8fb74d1b-847c-44f6-a423-9b0cb07fb42a",
         "parent": null,
         "name": "README.md",
         "type": "MARKDOWN_FILE",
@@ -61,11 +61,11 @@
       }
     },
     "deletedFiles": [],
-    "rootNode": "3819771b-d1c1-49be-99d7-95692d8dcbb8",
+    "rootNode": "7522bd88-760e-4268-a9c6-004316b1043b",
     "openFiles": [
-      "edb5c13e-380a-43e6-9f7a-270357905fbb"
+      "013c2eab-2ac6-4f68-be34-1d3832e2f63b"
     ],
-    "currentFileId": "edb5c13e-380a-43e6-9f7a-270357905fbb",
+    "currentFileId": "013c2eab-2ac6-4f68-be34-1d3832e2f63b",
     "resources": {
       "apigusEast1securedGreetergreetget": {
         "type": "API_GATEWAY",
@@ -106,12 +106,12 @@
   },
   "PROJECT_META": {
     "projectName": "serverless-secured-api",
-    "projectDescription": "Serverless project loaded from https://github.com/pmuens/serverless-secured-api/blob/master/serverless.yml",
+    "projectDescription": "Serverless project loaded from https://github.com/pmuens/serverless-secured-api",
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561981514154
+    "lastSave": 1561985264089
   },
   "VCS_STATE": {
     "provider": "GitHub",
