@@ -1,0 +1,123 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "3819771b-d1c1-49be-99d7-95692d8dcbb8": {
+        "id": "3819771b-d1c1-49be-99d7-95692d8dcbb8",
+        "parent": null,
+        "name": "serverless-secured-api",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "edb5c13e-380a-43e6-9f7a-270357905fbb"
+        ],
+        "isRemovable": false,
+        "filePath": "serverless-secured-api"
+      },
+      "edb5c13e-380a-43e6-9f7a-270357905fbb": {
+        "id": "edb5c13e-380a-43e6-9f7a-270357905fbb",
+        "parent": "3819771b-d1c1-49be-99d7-95692d8dcbb8",
+        "name": "handler.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "serverless-secured-api/handler.js",
+        "code": "'use strict';\n\nmodule.exports.securedGreeter = (event, context, callback) => {\n  const response = {\n    statusCode: 200,\n    body: JSON.stringify({ message: \"You're in! Hello from the greeter!\" })\n  };\n\n  context.succeed(response);\n};\n",
+        "config": {
+          "runtime": "nodejs4.3",
+          "handler": "securedGreeter",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1securedGreetergreetget",
+            "config": {}
+          }
+        ]
+      },
+      "bd5fb240-2dd8-4793-8a69-6613a0234341": {
+        "id": "bd5fb240-2dd8-4793-8a69-6613a0234341",
+        "parent": null,
+        "name": "serverless.yml",
+        "type": "YAML_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "serverless.yml",
+        "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
+      },
+      "aad3eec8-b90c-40c6-874e-7800df76184a": {
+        "id": "aad3eec8-b90c-40c6-874e-7800df76184a",
+        "parent": null,
+        "name": "README.md",
+        "type": "MARKDOWN_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "README.md",
+        "code": "# Serverless secured API\n\nServerless service which showcases how to build an API which is accessible through an API key.\n\n## Installation\n\nMake sure that you use Serverless v1.\n\n1. Run `serverless install --url https://github.com/pmuens/serverless-secured-api` to install the service in your current working directory\n2. Next up cd into the service with `cd serverless-secured-api`\n3. Deploy with `serverless deploy`\n\n## How to use\n\nSimply perform a request against the exposed endpoint:\n\nThis request should return `Forbidden`:\n\n```bash\ncurl https://XXXX.execute-api.region.amazonaws.com/dev/greet\n```\n\nWhereas this one should suceeds:\n(you get the API key in the info output after a successfull deployment or if you run `serverless info`)\n\n```bash\ncurl https://XXXX.execute-api.region.amazonaws.com/dev/greet --header \"x-api-key: <api-key>\"\n```\n\n## AWS services used\n\n- Lambda\n- API Gateway\n"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "3819771b-d1c1-49be-99d7-95692d8dcbb8",
+    "openFiles": [
+      "edb5c13e-380a-43e6-9f7a-270357905fbb"
+    ],
+    "currentFileId": "edb5c13e-380a-43e6-9f7a-270357905fbb",
+    "resources": {
+      "apigusEast1securedGreetergreetget": {
+        "type": "API_GATEWAY",
+        "name": "apigusEast1securedGreetergreetget",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiName": "securedGreeter",
+          "apiMode": 0,
+          "endpointType": "EDGE",
+          "resourceName": "greet",
+          "resourcePath": "/greet",
+          "resourceMode": 0,
+          "restMethod": "GET",
+          "proxyIntegration": true,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "dev"
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": "CloudFormation",
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "serverless-secured-api",
+    "projectDescription": "Serverless project loaded from https://github.com/pmuens/serverless-secured-api/blob/master/serverless.yml",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1561981514154
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "serverless-secured-api",
+      "url": "https://github.com/Indunil1992/serverless-secured-api"
+    }
+  }
+}
