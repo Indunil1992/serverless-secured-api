@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "4631999e-6464-4253-ae16-0a83c6657344": {
-        "id": "4631999e-6464-4253-ae16-0a83c6657344",
+      "a218ae7f-cc5c-4a61-a092-befa0eb5dc06": {
+        "id": "a218ae7f-cc5c-4a61-a092-befa0eb5dc06",
         "parent": null,
         "name": "serverless-secured-api",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "59eeec57-5f86-46d1-a914-594af357ced5"
+          "36bde104-e671-4efe-b2a5-7670a417da57"
         ],
         "isRemovable": false,
         "filePath": "serverless-secured-api"
       },
-      "59eeec57-5f86-46d1-a914-594af357ced5": {
-        "id": "59eeec57-5f86-46d1-a914-594af357ced5",
-        "parent": "4631999e-6464-4253-ae16-0a83c6657344",
+      "36bde104-e671-4efe-b2a5-7670a417da57": {
+        "id": "36bde104-e671-4efe-b2a5-7670a417da57",
+        "parent": "a218ae7f-cc5c-4a61-a092-befa0eb5dc06",
         "name": "handler.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -37,19 +37,8 @@
           }
         ]
       },
-      "21ebdec2-3d35-44af-97d7-1c879c66e269": {
-        "id": "21ebdec2-3d35-44af-97d7-1c879c66e269",
-        "parent": null,
-        "name": "serverless.yml",
-        "type": "YAML_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "serverless.yml",
-        "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
-      },
-      "c154414f-409e-433b-872e-9bddfcefffd3": {
-        "id": "c154414f-409e-433b-872e-9bddfcefffd3",
+      "3fc70a42-37a1-428f-b6c6-4816a3e13124": {
+        "id": "3fc70a42-37a1-428f-b6c6-4816a3e13124",
         "parent": null,
         "name": "README.md",
         "type": "MARKDOWN_FILE",
@@ -58,15 +47,25 @@
         "isRemovable": true,
         "filePath": "README.md",
         "code": "# Serverless secured API\n\nServerless service which showcases how to build an API which is accessible through an API key.\n\n## Installation\n\nMake sure that you use Serverless v1.\n\n1. Run `serverless install --url https://github.com/pmuens/serverless-secured-api` to install the service in your current working directory\n2. Next up cd into the service with `cd serverless-secured-api`\n3. Deploy with `serverless deploy`\n\n## How to use\n\nSimply perform a request against the exposed endpoint:\n\nThis request should return `Forbidden`:\n\n```bash\ncurl https://XXXX.execute-api.region.amazonaws.com/dev/greet\n```\n\nWhereas this one should suceeds:\n(you get the API key in the info output after a successfull deployment or if you run `serverless info`)\n\n```bash\ncurl https://XXXX.execute-api.region.amazonaws.com/dev/greet --header \"x-api-key: <api-key>\"\n```\n\n## AWS services used\n\n- Lambda\n- API Gateway\n"
+      },
+      "64ffa961-0c12-498f-8c9d-468d711e6236": {
+        "id": "64ffa961-0c12-498f-8c9d-468d711e6236",
+        "parent": null,
+        "name": "serverless.yml",
+        "type": "YAML_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "serverless.yml",
+        "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
       }
     },
     "deletedFiles": [],
-    "rootNode": "4631999e-6464-4253-ae16-0a83c6657344",
+    "rootNode": "a218ae7f-cc5c-4a61-a092-befa0eb5dc06",
     "openFiles": [
-      "59eeec57-5f86-46d1-a914-594af357ced5",
-      "21ebdec2-3d35-44af-97d7-1c879c66e269"
+      "36bde104-e671-4efe-b2a5-7670a417da57"
     ],
-    "currentFileId": "59eeec57-5f86-46d1-a914-594af357ced5",
+    "currentFileId": "36bde104-e671-4efe-b2a5-7670a417da57",
     "resources": {
       "apigusEast1securedGreetergreetget": {
         "type": "API_GATEWAY",
@@ -112,7 +111,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562045879450
+    "lastSave": 1562046908494
   },
   "VCS_STATE": {
     "provider": "GitHub",
