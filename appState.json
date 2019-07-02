@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "c4ea43bb-00a8-4343-9208-b3216d9bc282": {
-        "id": "c4ea43bb-00a8-4343-9208-b3216d9bc282",
+      "8dc93478-64a7-44d3-b9ab-434b66d0be0f": {
+        "id": "8dc93478-64a7-44d3-b9ab-434b66d0be0f",
         "parent": null,
         "name": "serverless-secured-api",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1"
+          "11f2c112-78fa-4988-8ac9-78c9d3e2f287"
         ],
         "isRemovable": false,
         "filePath": "serverless-secured-api"
       },
-      "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1": {
-        "id": "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1",
-        "parent": "c4ea43bb-00a8-4343-9208-b3216d9bc282",
+      "11f2c112-78fa-4988-8ac9-78c9d3e2f287": {
+        "id": "11f2c112-78fa-4988-8ac9-78c9d3e2f287",
+        "parent": "8dc93478-64a7-44d3-b9ab-434b66d0be0f",
         "name": "handler.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -37,8 +37,8 @@
           }
         ]
       },
-      "dc807963-33e2-4fb7-a68a-266df1fe5659": {
-        "id": "dc807963-33e2-4fb7-a68a-266df1fe5659",
+      "54f7b8ef-e9fb-4661-a2cc-31dcb6682488": {
+        "id": "54f7b8ef-e9fb-4661-a2cc-31dcb6682488",
         "parent": null,
         "name": "serverless.yml",
         "type": "YAML_FILE",
@@ -48,8 +48,8 @@
         "filePath": "serverless.yml",
         "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
       },
-      "b95e114c-2138-418d-82a7-1b5494b3043d": {
-        "id": "b95e114c-2138-418d-82a7-1b5494b3043d",
+      "8a6b9c62-559f-4256-8fda-db17d75139e7": {
+        "id": "8a6b9c62-559f-4256-8fda-db17d75139e7",
         "parent": null,
         "name": "README.md",
         "type": "MARKDOWN_FILE",
@@ -61,11 +61,13 @@
       }
     },
     "deletedFiles": [],
-    "rootNode": "c4ea43bb-00a8-4343-9208-b3216d9bc282",
+    "rootNode": "8dc93478-64a7-44d3-b9ab-434b66d0be0f",
     "openFiles": [
-      "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1"
+      "11f2c112-78fa-4988-8ac9-78c9d3e2f287",
+      "54f7b8ef-e9fb-4661-a2cc-31dcb6682488",
+      "8a6b9c62-559f-4256-8fda-db17d75139e7"
     ],
-    "currentFileId": "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1",
+    "currentFileId": "54f7b8ef-e9fb-4661-a2cc-31dcb6682488",
     "resources": {
       "apigusEast1securedGreetergreetget": {
         "type": "API_GATEWAY",
@@ -111,7 +113,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562043471582
+    "lastSave": 1562044395027
   },
   "VCS_STATE": {
     "provider": "GitHub",
