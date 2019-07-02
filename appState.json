@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "7522bd88-760e-4268-a9c6-004316b1043b": {
-        "id": "7522bd88-760e-4268-a9c6-004316b1043b",
+      "c4ea43bb-00a8-4343-9208-b3216d9bc282": {
+        "id": "c4ea43bb-00a8-4343-9208-b3216d9bc282",
         "parent": null,
         "name": "serverless-secured-api",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "013c2eab-2ac6-4f68-be34-1d3832e2f63b"
+          "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1"
         ],
         "isRemovable": false,
         "filePath": "serverless-secured-api"
       },
-      "013c2eab-2ac6-4f68-be34-1d3832e2f63b": {
-        "id": "013c2eab-2ac6-4f68-be34-1d3832e2f63b",
-        "parent": "7522bd88-760e-4268-a9c6-004316b1043b",
+      "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1": {
+        "id": "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1",
+        "parent": "c4ea43bb-00a8-4343-9208-b3216d9bc282",
         "name": "handler.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -24,7 +24,7 @@
         "filePath": "serverless-secured-api/handler.js",
         "code": "'use strict';\n\nmodule.exports.securedGreeter = (event, context, callback) => {\n  const response = {\n    statusCode: 200,\n    body: JSON.stringify({ message: \"You're in! Hello from the greeter!\" })\n  };\n\n  context.succeed(response);\n};\n",
         "config": {
-          "runtime": "nodejs8.10",
+          "runtime": "nodejs4.3",
           "handler": "securedGreeter",
           "timeout": 60,
           "memory": 128,
@@ -37,8 +37,8 @@
           }
         ]
       },
-      "609699f4-2c14-4da6-9cfb-bdc7da275cba": {
-        "id": "609699f4-2c14-4da6-9cfb-bdc7da275cba",
+      "dc807963-33e2-4fb7-a68a-266df1fe5659": {
+        "id": "dc807963-33e2-4fb7-a68a-266df1fe5659",
         "parent": null,
         "name": "serverless.yml",
         "type": "YAML_FILE",
@@ -48,8 +48,8 @@
         "filePath": "serverless.yml",
         "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
       },
-      "8fb74d1b-847c-44f6-a423-9b0cb07fb42a": {
-        "id": "8fb74d1b-847c-44f6-a423-9b0cb07fb42a",
+      "b95e114c-2138-418d-82a7-1b5494b3043d": {
+        "id": "b95e114c-2138-418d-82a7-1b5494b3043d",
         "parent": null,
         "name": "README.md",
         "type": "MARKDOWN_FILE",
@@ -61,11 +61,11 @@
       }
     },
     "deletedFiles": [],
-    "rootNode": "7522bd88-760e-4268-a9c6-004316b1043b",
+    "rootNode": "c4ea43bb-00a8-4343-9208-b3216d9bc282",
     "openFiles": [
-      "013c2eab-2ac6-4f68-be34-1d3832e2f63b"
+      "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1"
     ],
-    "currentFileId": "013c2eab-2ac6-4f68-be34-1d3832e2f63b",
+    "currentFileId": "0ee9bfb1-71fd-4000-b9a3-3e020453b5f1",
     "resources": {
       "apigusEast1securedGreetergreetget": {
         "type": "API_GATEWAY",
@@ -111,7 +111,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561985445780
+    "lastSave": 1562043471582
   },
   "VCS_STATE": {
     "provider": "GitHub",
