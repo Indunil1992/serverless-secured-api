@@ -24,7 +24,7 @@
         "filePath": "serverless-secured-api/handler.js",
         "code": "'use strict';\n\nmodule.exports.securedGreeter = (event, context, callback) => {\n  const response = {\n    statusCode: 200,\n    body: JSON.stringify({ message: \"You're in! Hello from the greeter!\" })\n  };\n\n  context.succeed(response);\n};\n",
         "config": {
-          "runtime": "nodejs4.3",
+          "runtime": "nodejs8.10",
           "handler": "securedGreeter",
           "timeout": 60,
           "memory": 128,
@@ -63,7 +63,8 @@
     "deletedFiles": [],
     "rootNode": "4631999e-6464-4253-ae16-0a83c6657344",
     "openFiles": [
-      "59eeec57-5f86-46d1-a914-594af357ced5"
+      "59eeec57-5f86-46d1-a914-594af357ced5",
+      "21ebdec2-3d35-44af-97d7-1c879c66e269"
     ],
     "currentFileId": "59eeec57-5f86-46d1-a914-594af357ced5",
     "resources": {
@@ -111,7 +112,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562045418767
+    "lastSave": 1562045879450
   },
   "VCS_STATE": {
     "provider": "GitHub",
