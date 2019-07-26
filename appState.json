@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "00612acc-9c68-4451-9bf4-0c39aea8ee60": {
-        "id": "00612acc-9c68-4451-9bf4-0c39aea8ee60",
+      "4fe18a55-d53c-4d7e-8451-af1f850043fa": {
+        "id": "4fe18a55-d53c-4d7e-8451-af1f850043fa",
         "parent": null,
         "name": "serverless-secured-api",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "cf4a1799-395b-4f50-9658-302712ee011e"
+          "c179a042-0359-43af-ae5b-541bc5938fde"
         ],
         "isRemovable": false,
         "filePath": "serverless-secured-api"
       },
-      "cf4a1799-395b-4f50-9658-302712ee011e": {
-        "id": "cf4a1799-395b-4f50-9658-302712ee011e",
-        "parent": "00612acc-9c68-4451-9bf4-0c39aea8ee60",
+      "c179a042-0359-43af-ae5b-541bc5938fde": {
+        "id": "c179a042-0359-43af-ae5b-541bc5938fde",
+        "parent": "4fe18a55-d53c-4d7e-8451-af1f850043fa",
         "name": "handler.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -35,18 +35,10 @@
             "resourceName": "apigusEast1securedGreetergreetget",
             "config": {}
           }
-        ],
-        "testCases": {
-          "d98b4097-5469-4975-9075-7cd689ed8cdd": {
-            "id": "d98b4097-5469-4975-9075-7cd689ed8cdd",
-            "name": "Unnamed event",
-            "functionId": "cf4a1799-395b-4f50-9658-302712ee011e",
-            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
-          }
-        }
+        ]
       },
-      "31c43be9-3d9f-4728-8d1d-7a6dfb9fc587": {
-        "id": "31c43be9-3d9f-4728-8d1d-7a6dfb9fc587",
+      "ce30ecaa-41a1-48ea-8020-876821fae6d7": {
+        "id": "ce30ecaa-41a1-48ea-8020-876821fae6d7",
         "parent": null,
         "name": "serverless.yml",
         "type": "YAML_FILE",
@@ -56,8 +48,8 @@
         "filePath": "serverless.yml",
         "code": "service: serverless-secured-api\n\nprovider:\n  name: aws\n  runtime: nodejs4.3\n  region: us-east-1\n  stage: dev\n  apiKeys:\n    - secret\n\nfunctions:\n  securedGreeter:\n    handler: handler.securedGreeter\n    events:\n      - http:\n          path: greet\n          method: GET\n          private: true\n"
       },
-      "85899508-3073-450f-9418-105f2c4913dc": {
-        "id": "85899508-3073-450f-9418-105f2c4913dc",
+      "71f302a9-78b8-444f-a326-cf5d4865d41e": {
+        "id": "71f302a9-78b8-444f-a326-cf5d4865d41e",
         "parent": null,
         "name": "README.md",
         "type": "MARKDOWN_FILE",
@@ -69,13 +61,11 @@
       }
     },
     "deletedFiles": [],
-    "rootNode": "00612acc-9c68-4451-9bf4-0c39aea8ee60",
+    "rootNode": "4fe18a55-d53c-4d7e-8451-af1f850043fa",
     "openFiles": [
-      "cf4a1799-395b-4f50-9658-302712ee011e",
-      "31c43be9-3d9f-4728-8d1d-7a6dfb9fc587",
-      "85899508-3073-450f-9418-105f2c4913dc"
+      "c179a042-0359-43af-ae5b-541bc5938fde"
     ],
-    "currentFileId": "cf4a1799-395b-4f50-9658-302712ee011e",
+    "currentFileId": "c179a042-0359-43af-ae5b-541bc5938fde",
     "resources": {
       "apigusEast1securedGreetergreetget": {
         "type": "API_GATEWAY",
@@ -116,12 +106,12 @@
   },
   "PROJECT_META": {
     "projectName": "serverless-secured-api",
-    "projectDescription": "Serverless project loaded from https://github.com/pmuens/serverless-secured-api",
+    "projectDescription": "Serverless project loaded from https://github.com/pmuens/serverless-secured-api/blob/master/serverless.yml",
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1564116256548
+    "lastSave": 1564116964565
   },
   "VCS_STATE": {
     "provider": "GitHub",
